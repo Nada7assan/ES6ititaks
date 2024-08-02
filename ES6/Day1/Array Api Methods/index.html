@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+let fruits = ["apple", "strawberry", "banana", "orange","mango"];
+
+//a. test that every element in the given array is a string 
+
+let arrString = fruits.every(ele => typeof ele === 'string');
+console.log(arrString);
+
+//b. test that some of array elements starts with "a"
+
+let arrStartA = fruits.some(ele => ele[0] === "a");
+console.log(arrStartA);
+
+//c. generate new array filtered from the given array with only elements thatstarts with "b" or "s"
+
+let newArrFilter = fruits.filter(ele => ele[0] === "b" || ele[0] === "s");
+console.log(newArrFilter);
+
+//d. generate new array each element of the new array contains a string declaring that you like the give fruit element 
+let newArrMap = fruits.map(ele => `I Like ${ele}`);
+console.log(newArrMap);
+
+//e. use forEach to display all elements of the new array from previous point.
+let displayArr = newArrMap.forEach(ele => console.log(ele));
+console.log(displayArr);
+
+    </script>
+</body>
+</html>
